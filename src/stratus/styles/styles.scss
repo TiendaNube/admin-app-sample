@@ -1,0 +1,11 @@
+@import '/node_modules/@tiendanube/design-tokens-nimbus/dist/scss/variables';
+
+@import 'safe-area';
+@import 'break-points';
+
+
+$prefix: 'stratus' !default;
+
+.nimbus--data-table__row {
+  background-color: white;
+}

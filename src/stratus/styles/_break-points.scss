@@ -1,0 +1,60 @@
+
+@function is-smallest-breakpoint($name,
+$breakpoints: $grid-breakpoints) {
+@return index(map-keys($breakpoints), $name)==1;
+}
+
+
+$grid-breakpoints: (
+xs: (margin: $breakpoint-xs-margin,
+  width: $breakpoint-xs-width,
+),
+md: (margin: $breakpoint-md-margin,
+  width: $breakpoint-md-width,
+),
+lg: (margin: $breakpoint-lg-margin,
+  width: $breakpoint-lg-width,
+),
+) !default;
+
+@mixin breakpoint-up($name, $breakpoints: $grid-breakpoints) {
+@if type-of($name)=='number' {
+  @media (min-width: $name) {
+    @content;
+  }
+}
+
+@else if map-has-key($breakpoints, $name) {
+  $breakpoint: map-get($breakpoints, $name
+);
+$width: map-get($breakpoint, width);
+
+@if is-smallest-breakpoint($name, $breakpoints) {
+  @content;
+}
+
+@else {
+  @media (min-width: $width) {
+    @content;
+  }
+}
+}
+}
+
+@mixin breakpoint-down($name,
+$breakpoints: $grid-breakpoints) {
+@if type-of($name)=='number' {
+  @media (max-width: $name) {
+    @content;
+  }
+}
+
+@else if map-has-key($breakpoints, $name) {
+  $breakpoint: map-get($breakpoints, $name);
+  $width: map-get($breakpoint, width) - 1;
+
+  @media (max-width: $width) {
+    @content;
+  }
+}
+}

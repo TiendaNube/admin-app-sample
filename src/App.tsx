@@ -1,11 +1,22 @@
-import { useNexoConnect } from '@tiendanube/nexo/react';
-import { BrowserRouter, Switch, Route, Link } from 'react-router-dom';
+import { connect, iAmReady } from '@tiendanube/nexo/helpers';
+import { useEffect, useState } from 'react';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import nexo from './nexoClient';
 import NexoSyncRoute from './NexoSyncRoute';
+import { ConfigurationPage, DetailPage, MainPage } from './pages';
+
 
 function App() {
-  const isConnect = useNexoConnect(nexo);
+  const [isConnect, setIsConnect] = useState(false);
+
+  useEffect(() => {
+    connect(nexo).then(async () => {
+      setIsConnect(true);
+      iAmReady(nexo);
+    });
+  }, []);
+
 
   if (!isConnect) return <div>conecting..</div>;
 
@@ -13,16 +24,14 @@ function App() {
     <BrowserRouter>
       <NexoSyncRoute>
         <Switch>
-          <Route path="/subpage" exact>
-            <div>subpage
-              <button onClick={() => window.history.back()}>back</button>
-
-            </div>
+          <Route path="/" exact>
+            <MainPage />
           </Route>
-          <Route path="/">
-            <div>
-              <Link to="/subpage">Go to subpage</Link>
-            </div>
+          <Route path="/configuration">
+            <ConfigurationPage />
+          </Route>
+          <Route path="/detail">
+            <DetailPage />
           </Route>
         </Switch>
       </NexoSyncRoute>
