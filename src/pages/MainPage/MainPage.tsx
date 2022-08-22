@@ -16,7 +16,8 @@ function PageMain() {
   const { push } = useHistory();
   const { isMobile } = useResponsive();
 
-  const handleGoToConfiguration = () => { push('/configuration') }
+  // TODO: push to /configuration instead of /delivery
+  const handleGoToConfiguration = () => { push('/delivery') }
 
   const handleGoToOrders = () => goTo(nexo, '/orders');
 

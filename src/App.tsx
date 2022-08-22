@@ -4,7 +4,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import nexo from './nexoClient';
 import NexoSyncRoute from './NexoSyncRoute';
-import { ConfigurationPage, DetailPage, MainPage } from './pages';
+import { ConfigurationPage, DeliveryPage, DetailPage, MainPage } from './pages';
 
 
 function App() {
@@ -29,6 +29,9 @@ function App() {
           </Route>
           <Route path="/configuration">
             <ConfigurationPage />
+          </Route>
+          <Route path="/delivery">
+            <DeliveryPage />
           </Route>
           <Route path="/detail">
             <DetailPage />
