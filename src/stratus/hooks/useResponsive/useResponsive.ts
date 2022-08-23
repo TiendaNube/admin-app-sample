@@ -13,7 +13,7 @@ function useResponsive(
   const { width } = useWindowSize();
   const isMobile = width < breakpoint;
   return {
-  isMobile,
+    isMobile,
     isDesktop: !isMobile,
   };
 }

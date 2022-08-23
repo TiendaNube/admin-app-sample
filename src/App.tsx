@@ -6,7 +6,6 @@ import nexo from './nexoClient';
 import NexoSyncRoute from './NexoSyncRoute';
 import { ConfigurationPage, DetailPage, MainPage } from './pages';
 
-
 function App() {
   const [isConnect, setIsConnect] = useState(false);
 
@@ -16,7 +15,6 @@ function App() {
       iAmReady(nexo);
     });
   }, []);
-
 
   if (!isConnect) return <div>conecting..</div>;
 

@@ -32,7 +32,10 @@ function Header({
     <>
       <HeaderTop actions={actions} navigation={topNavigation} />
       <Stack>
-        <Stack.Item fill>{isTitleString && <Title text={title as string} />} {!isTitleString && title}</Stack.Item>
+        <Stack.Item fill>
+          {isTitleString && <Title text={title as string} />}{' '}
+          {!isTitleString && title}
+        </Stack.Item>
         {(paginationPrevious || paginationNext) && (
           <Stack.Item>
             <Pagination

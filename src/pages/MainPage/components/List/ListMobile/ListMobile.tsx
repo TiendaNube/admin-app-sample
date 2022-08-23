@@ -1,10 +1,12 @@
-import { DataList, Link, Text, Label } from "@tiendanube/components";
-import { useHistory } from "react-router-dom";
+import { DataList, Link, Text, Label } from '@tiendanube/components';
+import { useHistory } from 'react-router-dom';
 
 const { Row, Cell } = DataList;
 function ListMobile() {
   const { push } = useHistory();
-  const handleGoToDetail = () => { push('/detail') }
+  const handleGoToDetail = () => {
+    push('/detail');
+  };
   return (
     <DataList>
       <Row id={'1'}>
@@ -14,7 +16,7 @@ function ListMobile() {
           </Link>
         </Cell>
         <Cell width={30} alignRight>
-          <Label appearance='success' id='aa' label={'Pagado'} />
+          <Label appearance="success" id="aa" label={'Pagado'} />
         </Cell>
         <Cell>
           <Text textAlign="right">Aaa NN</Text>
@@ -27,7 +29,7 @@ function ListMobile() {
           </Link>
         </Cell>
         <Cell width={30} alignRight>
-          <Label appearance='danger' id='aa' label={'Rechazado'} />
+          <Label appearance="danger" id="aa" label={'Rechazado'} />
         </Cell>
         <Cell>
           <Text textAlign="right">Aaa NN</Text>
@@ -40,7 +42,7 @@ function ListMobile() {
           </Link>
         </Cell>
         <Cell width={30} alignRight>
-          <Label appearance='success' id='aa' label={'Pagado'} />
+          <Label appearance="success" id="aa" label={'Pagado'} />
         </Cell>
         <Cell>
           <Text textAlign="right">Aaa NN</Text>
@@ -53,7 +55,7 @@ function ListMobile() {
           </Link>
         </Cell>
         <Cell width={30} alignRight>
-          <Label appearance='success' id='aa' label={'Pagado'} />
+          <Label appearance="success" id="aa" label={'Pagado'} />
         </Cell>
         <Cell>
           <Text textAlign="right">Aaa NN</Text>

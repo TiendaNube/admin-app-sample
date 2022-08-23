@@ -1,4 +1,4 @@
-import useResponsive from "../../hooks/useResponsive";
+import useResponsive from '../../hooks/useResponsive';
 
 interface ResponsiveProps {
   mobile: JSX.Element;
