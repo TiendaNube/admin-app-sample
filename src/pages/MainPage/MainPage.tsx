@@ -16,9 +16,8 @@ function PageMain() {
   const { push } = useHistory();
   const { isMobile } = useResponsive();
 
-  // TODO: push to /configuration instead of /delivery
-  const handleGoToConfiguration = () => { push('/delivery') }
-
+  const handleGoToConfiguration = () => push('/configuration');
+  const handleGoToDelivery = () => push('/delivery');
   const handleGoToOrders = () => goTo(nexo, '/orders');
 
   const actions = isMobile ?
@@ -26,6 +25,7 @@ function PageMain() {
     :
     <Stack>
       <Button appearance='default' onClick={handleGoToConfiguration} icon={CogIcon}>Configuración</Button >
+      <Button appearance='secondary' onClick={handleGoToDelivery}>Envios personalizados</Button>
       <Button appearance='primary' onClick={handleGoToOrders} >Ir a ventas</Button >
     </Stack>;
 
