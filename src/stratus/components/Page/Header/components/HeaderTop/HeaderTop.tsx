@@ -5,7 +5,7 @@ import {
   Link,
 } from '@tiendanube/components';
 import { ChevronLeftIcon } from '@tiendanube/icons';
-import { useResponsive } from '../../hooks';
+import { useResponsive } from '../../../../../hooks';
 
 import './HeaderTop.scss';
 export interface HeaderTopProps {

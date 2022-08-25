@@ -1,7 +1,6 @@
 import { InterfaceButton, InterfaceLabel, Stack } from '@tiendanube/components';
-import { Labels, Pagination, Subtitle, Title } from './components';
+import { Labels, Pagination, Subtitle, Title, HeaderTop } from './components';
 import { useResponsive } from '../../../hooks';
-import HeaderTop from '../../HeaderTop';
 
 export interface HeaderProps {
   title: string | React.ReactNode;
