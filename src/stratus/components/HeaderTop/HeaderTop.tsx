@@ -1,4 +1,9 @@
-import { Button, InterfaceButton, InterfaceLink, Link } from '@tiendanube/components';
+import {
+  Button,
+  InterfaceButton,
+  InterfaceLink,
+  Link,
+} from '@tiendanube/components';
 import { ChevronLeftIcon } from '@tiendanube/icons';
 import { useResponsive } from '../../hooks';
 
@@ -37,11 +42,17 @@ function HeaderTop({
 
   return (
     <div className="stratus--page-mobile-navbar">
-      {navigation && <div className="stratus--page-navbar__back">
-        <Button onClick={navigation.onClick} icon={ChevronLeftIcon} appearance="secondary">
-          {navigation.children}
-        </Button>
-      </div>}
+      {navigation && (
+        <div className="stratus--page-navbar__back">
+          <Button
+            onClick={navigation.onClick}
+            icon={ChevronLeftIcon}
+            appearance="secondary"
+          >
+            {navigation.children}
+          </Button>
+        </div>
+      )}
       <div className="stratus--page-mobile-navbar__toolbar">
         {renderMainAction}
         {actions}

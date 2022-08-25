@@ -1,1 +1,1 @@
-export { default } from "./ListMobile";
+export { default } from './ListMobile';

@@ -125,7 +125,7 @@
 - The component should have the same name as the file using Pascal Case format. It should be declared in a Regular Function, always typying the expected answer and making the default import at the end of the file.
   ```jsx
   // ComponentExample.tsx
-  import React from "react";
+  import React from 'react';
   function ComponentExample(): JSX.Element {
     return <div>...</div>;
   }
@@ -135,7 +135,7 @@
 
   ```jsx
   // ComponentExample.tsx
-  import React from "react";
+  import React from 'react';
 
   interface ComponentExampleProps {
     title: string;
@@ -159,12 +159,12 @@
 - The index file will be responsible for exporting everything needed form the module. Especially, the component's default.
   ```jsx
   // index.ts
-  export { default } from "./ComponentExample";
+  export { default } from './ComponentExample';
   ```
 - The mock constants can stay in the same file, as long as they do not fill more than 5 lines. If they do, they must be moved to a constants file. Their name should be declared in uppercase, in SNAKE_CASE format.
   ```jsx
   // ComponentExample.tsx
-  import React from "react";
+  import React from 'react';
   const TIME_IN_A_DAY = 23412341341341234;
   function ComponentExample(): JSX.Element {
     const date = new Date(TIME_IN_A_DAY);
@@ -225,12 +225,12 @@
 - For testing best practices, please read this [document](https://kentcdodds.com/blog/common-mistakes-with-react-testing-library).
 - To create a test is necessary to import from the testing library both the render and the screen.
   ```jsx
-  import { render, screen } from "@testing-library/react";
+  import { render, screen } from '@testing-library/react';
   ```
 - The component to be tested should also be imported.
   ```jsx
-  import { render, screen } from "@testing-library/react";
-  import ComponentExample from "./ComponentExample";
+  import { render, screen } from '@testing-library/react';
+  import ComponentExample from './ComponentExample';
   ```
 - The heading of the tests must be written following the order Given-When-Then [Documentación](https://cucumber.io/docs/gherkin/reference/)
   ```
@@ -253,11 +253,11 @@
   ```
 - In this first instance, we will verify the right rendering of the component by checking the text in each of the elements.
   ```jsx
-  import { render, screen } from "@testing-library/react";
-  import ComponentExample from "./ComponentExample";
-  describe("GIVEN a ComponentExample", () => {
-    describe("WHEN rendered", () => {
-      it("THEN should display the correct text", () => {
+  import { render, screen } from '@testing-library/react';
+  import ComponentExample from './ComponentExample';
+  describe('GIVEN a ComponentExample', () => {
+    describe('WHEN rendered', () => {
+      it('THEN should display the correct text', () => {
         render(<ComponentExample title="title" description="description" />);
         expect(screen.getByText(/title/i)).toBeInTheDocument();
         expect(screen.getByText(/description/i)).toBeInTheDocument();
@@ -265,4 +265,3 @@
     });
   });
   ```
-

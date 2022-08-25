@@ -1,7 +1,7 @@
-import nexo from "@tiendanube/nexo";
+import nexo from '@tiendanube/nexo';
 
 const instance = nexo.create({
-  clientId: "123",
+  clientId: '123',
   log: true,
 });
 
