@@ -12,14 +12,14 @@ function ListMobile() {
       <Row id={'1'}>
         <Cell rowTitle trimText width={70}>
           <Link appearance="primary" onClick={handleGoToDetail}>
-            #919191
+            #93948
           </Link>
         </Cell>
         <Cell width={30} alignRight>
           <Label appearance="success" id="aa" label={'Pagado'} />
         </Cell>
         <Cell>
-          <Text textAlign="right">Aaa NN</Text>
+          <Text textAlign="right">Rani Sorina</Text>
         </Cell>
       </Row>
       <Row id={'2'}>
@@ -32,33 +32,7 @@ function ListMobile() {
           <Label appearance="danger" id="aa" label={'Rechazado'} />
         </Cell>
         <Cell>
-          <Text textAlign="right">Aaa NN</Text>
-        </Cell>
-      </Row>
-      <Row id={'22'}>
-        <Cell rowTitle trimText width={70}>
-          <Link appearance="primary" onClick={handleGoToDetail}>
-            #919191
-          </Link>
-        </Cell>
-        <Cell width={30} alignRight>
-          <Label appearance="success" id="aa" label={'Pagado'} />
-        </Cell>
-        <Cell>
-          <Text textAlign="right">Aaa NN</Text>
-        </Cell>
-      </Row>
-      <Row id={'22'}>
-        <Cell rowTitle trimText width={70}>
-          <Link appearance="primary" onClick={handleGoToDetail}>
-            #919191
-          </Link>
-        </Cell>
-        <Cell width={30} alignRight>
-          <Label appearance="success" id="aa" label={'Pagado'} />
-        </Cell>
-        <Cell>
-          <Text textAlign="right">Aaa NN</Text>
+          <Text textAlign="right">Laxman Hettie</Text>
         </Cell>
       </Row>
     </DataList>

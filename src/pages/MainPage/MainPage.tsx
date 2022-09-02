@@ -1,12 +1,11 @@
-import { Button, Link, Stack } from '@tiendanube/components';
-import { CogIcon } from '@tiendanube/icons';
-import { goTo, navigateHeaderRemove } from '@tiendanube/nexo/helpers';
 import { useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
+import { Page, useResponsive } from '@tiendanube/admin-components';
+import { Button, Link, Stack } from '@tiendanube/components';
+import { CogIcon, MoneyIcon } from '@tiendanube/icons';
+import { goTo, navigateHeaderRemove } from '@tiendanube/nexo/helpers';
 
 import nexo from '../../nexoClient';
-import { Page } from '../../stratus/components';
-import { useResponsive } from '../../stratus/hooks';
 
 import List from './components/List';
 import { ReactComponent as Logo } from './logo.svg';
@@ -30,11 +29,11 @@ function PageMain() {
       >
         Configuración
       </Button>
-      <Button appearance="secondary" onClick={handleGoToDelivery}>
+      <Button appearance="default" onClick={handleGoToDelivery}>
         Envios personalizados
       </Button>
-      <Button appearance="primary" onClick={handleGoToOrders}>
-        Ir a ventas
+      <Button appearance="primary" icon={MoneyIcon} onClick={handleGoToOrders}>
+        Ventas
       </Button>
     </Stack>
   );

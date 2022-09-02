@@ -1,4 +1,4 @@
-import { useResponsive } from '../../../../stratus/hooks';
+import { useResponsive } from '@tiendanube/admin-components';
 
 import ListDesktop from './ListDesktop';
 import ListMobile from './ListMobile';

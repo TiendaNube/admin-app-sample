@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
+import { CancelAndSaveButtons, Page } from '@tiendanube/admin-components';
 import {
   BaseCard,
   Input,
@@ -14,22 +15,6 @@ import {
 import { EditIcon } from '@tiendanube/icons';
 import { navigateHeader } from '@tiendanube/nexo/helpers';
 import nexo from '../../nexoClient';
-import { CancelAndSaveButtons, Page } from '../../stratus/components';
-
-// TODO: implement state
-const INITIAL_STATE = {
-  address: '',
-  deliveryType: '',
-  price: '',
-  conditions: {
-    minWeight: '',
-    maxWeight: '',
-    minPrice: '',
-    maxPrice: '',
-  },
-  minDeliveryDays: '',
-  maxDeliveryDays: '',
-};
 
 const DELIVERY_TYPES: InterfaceRadioButtonOption[] = [
   {

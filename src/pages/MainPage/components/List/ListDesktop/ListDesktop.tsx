@@ -41,10 +41,10 @@ function ListDesktop() {
             </Link>
           </Cell>
           <Cell grow={0} basis={130}>
-            <Text>Customer</Text>
+            <Text>22 ago</Text>
           </Cell>
           <Cell grow={1}>
-            <Text>Customer</Text>
+            <Text>Rani Sorina</Text>
           </Cell>
           <Cell>
             <Label appearance="success" id="aa" label={'Pagado'} />
@@ -54,14 +54,14 @@ function ListDesktop() {
         <Row id="2" align="center">
           <Cell grow={0} basis={120}>
             <Link onClick={handleGoToDetail} appearance="primary">
-              #93948
+              #93942
             </Link>
           </Cell>
           <Cell grow={0} basis={130}>
-            <Text>Customer</Text>
+            <Text>21 jul</Text>
           </Cell>
           <Cell grow={1}>
-            <Text>Customer</Text>
+            <Text>Laxman Hettie</Text>
           </Cell>
           <Cell>
             <Label appearance="danger" id="aa" label={'Rechazado'} />

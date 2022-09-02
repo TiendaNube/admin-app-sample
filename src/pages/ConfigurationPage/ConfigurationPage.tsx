@@ -10,7 +10,7 @@ import {
 } from '@tiendanube/components';
 import { CheckCircleIcon, ExclamationCircleIcon } from '@tiendanube/icons';
 import { navigateHeader } from '@tiendanube/nexo/helpers';
-import { CancelAndSaveButtons, Page } from '../../stratus/components';
+import { CancelAndSaveButtons, Page } from '@tiendanube/admin-components';
 import nexo from '../../nexoClient';
 
 const delay = (t: number) => new Promise((resolve) => setTimeout(resolve, t));

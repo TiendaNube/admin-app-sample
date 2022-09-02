@@ -1,16 +1,21 @@
 import { useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import {
+  CancelAndSaveButtons,
+  Page,
+  Layout,
+} from '@tiendanube/admin-components';
+import {
   Card,
   Input,
   InterfaceNameValue,
   Stack,
   Toast,
+  Text,
 } from '@tiendanube/components';
 import { navigateHeader } from '@tiendanube/nexo/helpers';
-import { CancelAndSaveButtons, Page } from '../../stratus/components';
+
 import nexo from '../../nexoClient';
-import Layout from '../../stratus/components/Layout';
 
 function DetailPage() {
   const history = useHistory();
@@ -77,7 +82,13 @@ function DetailPage() {
             </Stack>
           </Card>
         }
-        right={<Card title={'Más información'}>...</Card>}
+        right={
+          <Card title={'Más información'}>
+            <Text>
+              Store: <b>ocaemailsintag</b>
+            </Text>
+          </Card>
+        }
       />
     </Page>
   );
