@@ -8,9 +8,9 @@
     - [Actors](#actors)
       - [Admin](#admin)
       - [Nexo](#nexo)
-      - [App](#app)
+      - [App in admin](#app-in-admin)
   - [Application initialization flow](#application-initialization-flow)
-  - [Introducción Nexo](#introducción-nexo)
+  - [Introduction to Nexus](#introduction-to-nexus)
     - [FAQ](#faq)
   - [React Application](#react-application)
   - [Vanilla JS Aplication](#vanilla-js-aplication)
@@ -40,7 +40,7 @@ Tool developed in JS for the communication between the Admin and the Application
 - Management of actions (patterns)
 - Tools provider (tools)
 
-#### App
+#### App in admin
 The application has to be an HTML document with public access via URL
 - Start Nexo for message exchange (start bridge)
 - Notify that the application is ready to be shown (start)
@@ -51,7 +51,7 @@ The application has to be an HTML document with public access via URL
 ![Authentication App New Admin_2022-12-06_16-50-18](https://user-images.githubusercontent.com/44773699/205972906-a8d59243-4893-4f28-8dee-61b60a86cc0b.png)
 
 
-## Introducción Nexo
+## Introduction to Nexus
 It is a tool developed by Nuvemshop that allows us to establish communication with the Admin and also manage the actions that can be carried out between the application and the administrator.
 
 Nexo is available through NPM
