@@ -2,11 +2,21 @@
 
 > The objective of this project is to provide the developer with tools and examples to create an embedded application in Admin of Nuvemshop
 
-3 examples will be shown, 2 front and one backend
-- React with Nimbus (Nuvemshop Design System)
-- Vanilla with Webpack
-- NodeJS (to API)
 
+- [☁️ App in Admin](#️-app-in-admin)
+  - [⚡️ Let's start](#️-lets-start)
+    - [Actors](#actors)
+      - [Admin](#admin)
+      - [Nexo](#nexo)
+      - [App](#app)
+  - [Application initialization flow](#application-initialization-flow)
+  - [Introducción Nexo](#introducción-nexo)
+    - [FAQ](#faq)
+  - [React Application](#react-application)
+  - [Vanilla JS Aplication](#vanilla-js-aplication)
+  - [API for Application](#api-for-application)
+  - [Developer Mode](#developer-mode)
+    - [Test application information](#test-application-information)
 
 ## ⚡️ Let's start
 
@@ -15,7 +25,7 @@ Before we start let's do a macro view to understand the main actors with their r
 ![Untitled_2022-12-06_16-14-24](https://user-images.githubusercontent.com/44773699/205965748-e30c865c-be50-4c99-a038-fece4ca7232b.png)
 
 ###  Actors
-### Admin
+#### Admin
 Nuvemshop admin with merchants logged
 - Activate development mode (dev mode)
 - Define the access for the application (routes)
@@ -24,13 +34,13 @@ Nuvemshop admin with merchants logged
 - Check if the application is ready to load within the Admin
 - Management of session token that will validate the authenticity of a Store with an active session (authentication)
 
-### [Nexo](https://www.npmjs.com/package/@tiendanube/nexo)
+#### [Nexo](https://www.npmjs.com/package/@tiendanube/nexo)
 Tool developed in JS for the communication between the Admin and the Application
 - Being the bridge for communications between the Admin and the Application (bridge)
 - Management of actions (patterns)
 - Tools provider (tools)
 
-### App
+#### App
 The application has to be an HTML document with public access via URL
 - Start Nexo for message exchange (start bridge)
 - Notify that the application is ready to be shown (start)
@@ -98,6 +108,22 @@ Dependencies:
 - URL synchronization
 - Mobile mode
 
+
+## Vanilla JS Aplication
+
+In progress..
+Create video..
+
+**App Features:**
+- x
+
+
+## API for Application
+In progress..
+Create video..
+**App Features:**
+- x
+  
 ## Developer Mode
 > This functionality is only available for previously enabled Stores. To access this functionality, request it through a contact at Nuvemshop
 
