@@ -10,7 +10,7 @@
       - [Nexo](#nexo)
       - [App in admin](#app-in-admin)
   - [Application initialization flow](#application-initialization-flow)
-  - [Introduction to Nexus](#introduction-to-nexus)
+  - [Introduction to Nexo](#introduction-to-nexo)
     - [FAQ](#faq)
   - [React Application](#react-application)
   - [Vanilla JS Aplication](#vanilla-js-aplication)
@@ -51,7 +51,7 @@ The application has to be an HTML document with public access via URL
 ![Authentication App New Admin_2022-12-06_16-50-18](https://user-images.githubusercontent.com/44773699/205972906-a8d59243-4893-4f28-8dee-61b60a86cc0b.png)
 
 
-## Introduction to Nexus
+## Introduction to Nexo
 It is a tool developed by Nuvemshop that allows us to establish communication with the Admin and also manage the actions that can be carried out between the application and the administrator.
 
 Nexo is available through NPM
@@ -86,13 +86,15 @@ The logs are available through the browser console
 
 ## React Application
 
-This project was bootstrapped with Create React App.
+This project was bootstrapped with Create React App. The app is in the folder [./react](/react)
+- Install the dependencies: `npn install`
+- Run the application: `npn run start`
 
 <a href="https://www.loom.com/share/5f6414f1425049ec985b8096dabfc389">
     <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/5f6414f1425049ec985b8096dabfc389-with-play.gif">
 </a>
 
-Dependencies: 
+**Dependencies** 
  - React 17
  - [Nexo](https://www.npmjs.com/package/@tiendanube/nexo)
  - [Nimbus](https://tiendanube.github.io/design-system-nimbus/?path=/story/intro-welcome--welcome) Design System Nuvemshop
