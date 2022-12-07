@@ -29,7 +29,7 @@ SDK to establish communication between the Admin and the Application
 
 ### Admin
 Admin actor is responsible for managing the currently logged in Nuvemshop merchant, which means:
-- Activate development mode: allows developers to test applications without the need of them being formally approved in our Appstore ([see below how to activate this for your app](/#developer-mode))
+- Activate development mode: allows developers to test applications without the need of them being formally approved in our Appstore ([see below how to activate this for your app](#-developer-mode))
 - Define the access for the application (routes): Nuvemshop will provide you with a route (URL), in which your application will be summoned.
 - Access the application through the iframe `iframe`
 - Start Nexo for message exchange `bridge`
