@@ -2,7 +2,7 @@
 
 > An "In-Admin App", is an application that runs and executes within the context of Nuvemshop's administration panel, through the use of an iframe. The purpose of building in-admin apps is to provide integrations that feel more seamless and native.
 
-The objective of this project is to provide the developer with tools and examples to create such an embedded application. We will also provide 3 example applications: (1) one simple front end app in react, (2) one simple front end app in vanilla js, (3) a simple back end application written in node js that can connect with the previous two example front end apps.
+> The objective of this project is to provide the developer with tools and examples to create such an embedded application. We will also provide 3 example applications: (1) one simple front end app in react, (2) one simple front end app in vanilla js, (3) a simple back end application written in node js that can connect with the previous two example front end apps.
 
 ## ⚡️ Let's start
 
@@ -11,10 +11,19 @@ Before we start let's do a macro view to understand the main actors with their r
 ![Untitled_2022-12-06_16-14-24](https://user-images.githubusercontent.com/44773699/205965748-e30c865c-be50-4c99-a038-fece4ca7232b.png)
 
 ## 🎭 Actors
+
+As a developer, you will be responsible for developing the code in the In-Admin App. Your app, will be connected to the Nuvemshop Admin, through an SDK called Nexo. We are going to briefly describe the responsibilities of each Actor:
+
+### In-admin App
+This is the application that you will write. The application has to be a simple HTML document with public access via an URL. Below, you will find comprehensive documentation about how Nexo works. For now, we will just describe the basics:
+- Use Start Nexo to initialize message exchange between the Admin, and the App (this will start the bridge for future communications)
+- After initialization, you will have to explicitely Notify that the application is ready to be shown, this way, the Admin will render it
+- Finally, you will execute the In-App business model logic
+
 ### Admin
-Nuvemshop admin with merchants logged
-- Activate development mode `dev mode`
-- Define the access for the application `routes`
+Admin actor is responsible for managing the currently logged in Nuvemshop merchant, which means:
+- Activate development mode: allows developers to test applications without the need of them being formally approved in our Appstore (see below how to activate this for your app)
+- Define the access for the application (routes): Nuvemshop will provide you with a route (URL), in which your application will be summoned.
 - Access the application through the iframe `iframe`
 - Start Nexo for message exchange `bridge`
 - Check if the application is ready to load within the Admin `verify`
@@ -26,11 +35,6 @@ Tool developed in JS for the communication between the Admin and the Application
 - Management of actions `patterns`
 - Tools provider `tools`
 
-### App in admin
-The application has to be an HTML document with public access via URL
-- Start Nexo for message exchange `start bridge`
-- Notify that the application is ready to be shown `start`
-- Representation of the business model
 
 ## 🚦Application initialization flow
 
