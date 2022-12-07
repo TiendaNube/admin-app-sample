@@ -8,7 +8,8 @@
 
 Before we start let's do a macro view to understand the main actors with their responsibilities and initiation flow
 
-![Untitled_2022-12-06_16-14-24](https://user-images.githubusercontent.com/44773699/205965748-e30c865c-be50-4c99-a038-fece4ca7232b.png)
+![Untitled_2022-12-07_17-53-25](https://user-images.githubusercontent.com/44773699/206258946-38ecedf7-dbba-4515-a7c3-de8dc9ae4799.png)
+
 
 ## 🎭 Actors
 
@@ -20,6 +21,12 @@ This is the application that you will write. The application has to be a simple 
 - After initialization, you will have to explicitely Notify that the application is ready to be shown, this way, the Admin will render it
 - Finally, you will execute the In-App business model logic
 
+### Nexo
+Tool developed in JS for the communication between the Admin and the Application
+- Being the bridge for communications between the Admin and the Application `bridge`
+- Management of actions `patterns`
+- Tools provider `tools`
+
 ### Admin
 Admin actor is responsible for managing the currently logged in Nuvemshop merchant, which means:
 - Activate development mode: allows developers to test applications without the need of them being formally approved in our Appstore (see below how to activate this for your app)
@@ -29,11 +36,6 @@ Admin actor is responsible for managing the currently logged in Nuvemshop mercha
 - Check if the application is ready to load within the Admin `verify`
 - Management of session token that will validate the authenticity of a Store with an active session `authentication`
 
-### Nexo
-Tool developed in JS for the communication between the Admin and the Application
-- Being the bridge for communications between the Admin and the Application `bridge`
-- Management of actions `patterns`
-- Tools provider `tools`
 
 
 ## 🚦Application initialization flow
@@ -56,7 +58,7 @@ The Nexo instance allows you to enter 2 parameters to start:
 
 | Config   |  Type                     | Description                                                        |
 |----------|---------------------------|--------------------------------------------------------------------|
-| clientId | `string` required         | This value is provided by Nuvemshop                                |
+| clientId | `string` required         | App Id, this value is provided by Nuvemshop in Partners Portal      |
 | log      | `boolean` default `false` | Allows to show the message transfers between the App and the Admin |
 
 The logs are available through the browser console
@@ -76,6 +78,7 @@ The logs are available through the browser console
 - [React Application](/react)
 - [Vanilla JS with webpack](/vanilla)
 - [API with NodeJS](/api)
+
 ## 💻 Developer Mode
 > This functionality is only available for previously enabled Stores. To access this functionality, request it through a contact at Nuvemshop
 
