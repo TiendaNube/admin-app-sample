@@ -23,7 +23,7 @@ To use you need
 - Listing page
 - Forms page
 - Layout of pages in 2 columns
-- Navigation to an option of the Administrator
+- Navigation to a section of the Administrator
 - URL synchronization
 - Mobile mode
 
