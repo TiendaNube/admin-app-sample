@@ -1,6 +1,8 @@
-# ☁️ App in Admin
+# ☁️ In-admin Applications
 
-> The objective of this project is to provide the developer with tools and examples to create an embedded application in Admin of Nuvemshop. We will also find 3 example applications in react, vanilla and api
+> An "In-Admin App", is an application that runs and executes within the context of Nuvemshop's administration panel, through the use of an iframe. The purpose of building in-admin apps is to provide integrations that feel more seamless and native.
+
+The objective of this project is to provide the developer with tools and examples to create such an embedded application. We will also provide 3 example applications: (1) one simple front end app in react, (2) one simple front end app in vanilla js, (3) a simple back end application written in node js that can connect with the previous two example front end apps.
 
 ## ⚡️ Let's start
 
