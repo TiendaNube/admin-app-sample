@@ -22,14 +22,14 @@ This is the application that you will write. The application has to be a simple 
 - Finally, you will execute the In-App business model logic
 
 ### Nexo
-Tool developed in JS for the communication between the Admin and the Application
-- Being the bridge for communications between the Admin and the Application `bridge`
-- Management of actions `patterns`
-- Tools provider `tools`
+SDK to establish communication between the Admin and the Application
+- Being the bridge for communications between the Admin and the Application
+- Defines and manages the available actions that are exchanged through messages
+- Provides tools to make easier the implementation of actions in the application 
 
 ### Admin
 Admin actor is responsible for managing the currently logged in Nuvemshop merchant, which means:
-- Activate development mode: allows developers to test applications without the need of them being formally approved in our Appstore (see below how to activate this for your app)
+- Activate development mode: allows developers to test applications without the need of them being formally approved in our Appstore ([see below how to activate this for your app](/#developer-mode))
 - Define the access for the application (routes): Nuvemshop will provide you with a route (URL), in which your application will be summoned.
 - Access the application through the iframe `iframe`
 - Start Nexo for message exchange `bridge`
