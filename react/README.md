@@ -1,43 +1,33 @@
-# Embedded App Sample
+# ⚛️ React Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). 
+This project was bootstrapped with Create React App. 
 
-The objective of this project is to provide the developer with tools (SDK) to create an embedded application in Admin of Nuvemshop
+<a href="https://www.loom.com/share/5f6414f1425049ec985b8096dabfc389">
+    <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/5f6414f1425049ec985b8096dabfc389-with-play.gif">
+</a>
 
-## Dependencies
-- React
-- [Nexo](https://www.npmjs.com/package/@tiendanube/nexo)
-- [Nimbus](https://github.com/TiendaNube/design-system-nimbus)
-- [React Router Dom v5](https://v5.reactrouter.com/web/guides/quick-start)
+To use you need
 
-## Stratus componentes
-Stratus Components provide a highly reusable set of components and hooks that will allow you to develop new pages.
+- **Install and Run application**
+  ```
+  npm install
+  ```
+- **Run application**
+  ```
+  npn run start
+  ```
 
-### Components
-- [Page](/src/stratus/components/Page/README.md)
-- Layout
-- CancelAndSaveButtons
+## Features
+- Management of pages and routes
+- Listing page
+- Forms page
+- Layout of pages in 2 columns
+- Navigation to an option of the Administrator
+- URL synchronization
+- Mobile mode
 
-### Hooks
-- useResponsive
-- useWindowSize
-
-
-
-
-## Setup
-
-
-Inside the project directory:
-
-- Install dependencies:
-
-```
-npm install
-```
-
-- Run project:
-
-```
-npm run start
-```
+## Dependencies 
+ - React 17 with TypeScript
+ - [Nexo](https://www.npmjs.com/package/@tiendanube/nexo)
+ - [Nimbus](https://tiendanube.github.io/design-system-nimbus/?path=/story/intro-welcome--welcome) Design System Nuvemshop
+ - [React Router Dom v5](https://v5.reactrouter.com/web/guides/quick-start)
