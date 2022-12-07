@@ -1,16 +1,12 @@
-const nexo = require('@tiendanube/nexo').default;
 const helpers = require('@tiendanube/nexo/helpers');
-
-const nexoClient =  nexo.create({
-  clientId: '0000',
-  log: true,
-})
+const axios = require('./axios');
+const nexoClient = require('./nexo');
 
 helpers.connect(nexoClient).then(() => {
   helpers.iAmReady(nexoClient);
 
   showConnected();
-  
+
   setSomeActions();
   
 }).catch(() => {
@@ -41,15 +37,26 @@ function setSomeActions(){
   const buttonSessionToken = document.createElement('button');
   buttonSessionToken.innerText = 'Get session token';
 
-  const textToken = document.createElement('span');
+  const textToken = document.createElement('pre');
 
   buttonSessionToken.addEventListener('click', () => {
     helpers.getSessionToken(nexoClient).then(token => {
       textToken.innerHTML = token;
     });
   });
-
   insertApp(buttonSessionToken);
+
+  const buttonGetPrivateInfo = document.createElement('button');
+  buttonGetPrivateInfo.innerText = 'Get private info';
+
+  insertApp(buttonGetPrivateInfo);
+
+  buttonGetPrivateInfo.addEventListener('click', () => {
+    axios.get('/secret').then(({data}) => {
+      textToken.innerHTML = JSON.stringify(data);
+    });
+  });
+
   insertApp(textToken);
 }
 
