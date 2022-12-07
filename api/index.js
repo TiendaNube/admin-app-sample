@@ -17,7 +17,9 @@ app.get(
   "/secret",
   passport.authenticate("jwt", { session: false }),
   (req, res, next) => {
-    res.json(req.user);
+    res.json({
+      message: `private message to storeId: ${req.user.storeId} at ${new Date}`
+    });
   }
 );
 
