@@ -65,6 +65,11 @@ The logs are available through the browser console
 - [What actions are available?](https://www.npmjs.com/package/@tiendanube/nexo#actions)
 - [What tools are available for the management of actions?](https://www.npmjs.com/package/@tiendanube/nexo#helpers)
   
+
+## 👨‍💻 Learn more about test applications
+- [React Application](/react)
+- [Vanilla JS with webpack](/vanilla)
+- [API with NodeJS](/vanilla)
 ## 💻 Developer Mode
 > This functionality is only available for previously enabled Stores. To access this functionality, request it through a contact at Nuvemshop
 
