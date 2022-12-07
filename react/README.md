@@ -5,11 +5,11 @@ This project was bootstrapped with Create React App.
 To use you need
 
 - **Install and Run application**
-  ```
+  ```bash
   npm install
   ```
 - **Run application**
-  ```
+  ```bash
   npn run start
   ```
 

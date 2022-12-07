@@ -1,4 +1,4 @@
-# 📦 Vanilla JS Aplication
+# 📦 Vanilla JS Application
 
 This application is created with HTML and vanilla javascript
 
