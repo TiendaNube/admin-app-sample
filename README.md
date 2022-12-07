@@ -69,7 +69,7 @@ The logs are available through the browser console
 ## 👨‍💻 Learn more about test applications
 - [React Application](/react)
 - [Vanilla JS with webpack](/vanilla)
-- [API with NodeJS](/vanilla)
+- [API with NodeJS](/api)
 ## 💻 Developer Mode
 > This functionality is only available for previously enabled Stores. To access this functionality, request it through a contact at Nuvemshop
 
