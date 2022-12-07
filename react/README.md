@@ -2,10 +2,6 @@
 
 This project was bootstrapped with Create React App. 
 
-<a href="https://www.loom.com/share/5f6414f1425049ec985b8096dabfc389">
-    <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/5f6414f1425049ec985b8096dabfc389-with-play.gif">
-</a>
-
 To use you need
 
 - **Install and Run application**
@@ -16,6 +12,11 @@ To use you need
   ```
   npn run start
   ```
+
+<a href="https://www.loom.com/share/5f6414f1425049ec985b8096dabfc389">
+    <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/5f6414f1425049ec985b8096dabfc389-with-play.gif">
+</a>
+
 
 ## Features
 - Management of pages and routes
