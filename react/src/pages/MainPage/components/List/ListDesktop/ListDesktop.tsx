@@ -1,15 +1,8 @@
-import {
-  Link,
-  Text,
-  Stack,
-  DataTable,
-  Pagination,
-  Label,
-} from '@tiendanube/components';
+import { Link, Text, Table, Tag } from '@nimbus-ds/components';
 
 import { useHistory } from 'react-router-dom';
 
-const { Header, Cell, Row } = DataTable;
+const { Head, Cell, Row, Body } = Table;
 function ListDesktop() {
   const { push } = useHistory();
   const handleGoToDetail = () => {
@@ -18,65 +11,70 @@ function ListDesktop() {
 
   return (
     <>
-      <DataTable>
-        <Header>
-          <Cell grow={0} basis={120}>
-            <Text>Number</Text>
-          </Cell>
-          <Cell grow={0} basis={130}>
-            <Text>Fecha</Text>
-          </Cell>
-          <Cell grow={1}>
-            <Text>Customer</Text>
-          </Cell>
-          <Cell>
-            <Text>Estado</Text>
-          </Cell>
-        </Header>
+      <Table>
+        <Head>
+          <Row backgroundColor="neutral-surface">
+            <Cell as="th" width="120px">
+              Number
+            </Cell>
+            <Cell as="th" width="140px">
+              Fecha
+            </Cell>
+            <Cell as="th">Customer</Cell>
+            <Cell as="th">Estado</Cell>
+          </Row>
+        </Head>
 
-        <Row id="1" align="center">
-          <Cell grow={0} basis={120}>
-            <Link onClick={handleGoToDetail} appearance="primary">
-              #93948
-            </Link>
-          </Cell>
-          <Cell grow={0} basis={130}>
-            <Text>Customer</Text>
-          </Cell>
-          <Cell grow={1}>
-            <Text>Customer</Text>
-          </Cell>
-          <Cell>
-            <Label appearance="success" id="aa" label={'Pagado'} />
-          </Cell>
-        </Row>
+        <Body>
+          <Row id="1">
+            <Cell>
+              <Link
+                as="button"
+                onClick={handleGoToDetail}
+                appearance="primary"
+                textDecoration="none"
+              >
+                #93948
+              </Link>
+            </Cell>
+            <Cell>
+              <Text>11 apr 23</Text>
+            </Cell>
+            <Cell>
+              <Text>Customer name</Text>
+            </Cell>
+            <Cell>
+              <Tag appearance="success" id="aa">
+                {'Pagado'}
+              </Tag>
+            </Cell>
+          </Row>
 
-        <Row id="2" align="center">
-          <Cell grow={0} basis={120}>
-            <Link onClick={handleGoToDetail} appearance="primary">
-              #93948
-            </Link>
-          </Cell>
-          <Cell grow={0} basis={130}>
-            <Text>Customer</Text>
-          </Cell>
-          <Cell grow={1}>
-            <Text>Customer</Text>
-          </Cell>
-          <Cell>
-            <Label appearance="danger" id="aa" label={'Rechazado'} />
-          </Cell>
-        </Row>
-      </DataTable>
-      <Stack justify="flex-end">
-        <Stack.Item>
-          <Pagination
-            pageSelected={1}
-            pageTotal={2}
-            onPageSelect={() => console.log('select page')}
-          />
-        </Stack.Item>
-      </Stack>
+          <Row id="2">
+            <Cell>
+              <Link
+                as="button"
+                onClick={handleGoToDetail}
+                appearance="primary"
+                textDecoration="none"
+              >
+                #93947
+              </Link>
+            </Cell>
+            <Cell>
+              <Text>10 apr 23</Text>
+            </Cell>
+            <Cell>
+              <Text>Customer name</Text>
+            </Cell>
+            <Cell>
+              <Tag appearance="danger" id="aa">
+                {'Rechazado'}
+              </Tag>
+            </Cell>
+          </Row>
+        </Body>
+      </Table>
     </>
   );
 }

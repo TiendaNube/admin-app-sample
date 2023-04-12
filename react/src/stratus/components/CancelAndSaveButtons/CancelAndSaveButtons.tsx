@@ -1,4 +1,4 @@
-import { Stack, Button } from '@tiendanube/components';
+import { Box, Button, Spinner } from '@nimbus-ds/components';
 
 interface CancelAndCofirmButtonsProps {
   onCancel: () => void;
@@ -18,23 +18,19 @@ function CancelAndSaveButtons({
   saveText,
 }: CancelAndCofirmButtonsProps): JSX.Element {
   return (
-    <Stack spacing="base" justify="flex-end">
-      <Stack.Item>
-        <Button disabled={isDisabled} onClick={onCancel}>
-          {cancelText}
-        </Button>
-      </Stack.Item>
-      <Stack.Item>
-        <Button
-          spinner={isLoading}
-          disabled={isDisabled || isLoading}
-          onClick={onSave}
-          appearance="primary"
-        >
-          {saveText}
-        </Button>
-      </Stack.Item>
-    </Stack>
+    <Box display="flex" gap="2" justifyContent="flex-end" width="100%">
+      <Button disabled={isDisabled} onClick={onCancel}>
+        {cancelText}
+      </Button>
+      <Button
+        disabled={isDisabled || isLoading}
+        onClick={onSave}
+        appearance="primary"
+      >
+        {isLoading && <Spinner color="currentColor" size="small" />}
+        {saveText}
+      </Button>
+    </Box>
   );
 }
 

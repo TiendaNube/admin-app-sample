@@ -1,15 +1,14 @@
-import { Button, Link, Stack } from '@tiendanube/components';
-import { CogIcon } from '@tiendanube/icons';
+import { Icon, Button, Box, IconButton } from '@nimbus-ds/components';
+import { Page } from '@nimbus-ds/patterns';
+import { CogIcon } from '@nimbus-ds/icons';
 import { goTo, navigateHeaderRemove } from '@tiendanube/nexo/helpers';
 import { useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 
 import nexo from '../../nexoClient';
-import { Page } from '../../stratus/components';
 import { useResponsive } from '../../stratus/hooks';
 
 import List from './components/List';
-import { ReactComponent as Logo } from './logo.svg';
 
 function PageMain() {
   const { push } = useHistory();
@@ -20,23 +19,24 @@ function PageMain() {
   const handleGoToOrders = () => goTo(nexo, '/orders');
 
   const actions = isMobile ? (
-    <Link onClick={handleGoToConfiguration} icon={CogIcon} />
+    <IconButton
+      backgroundColor="transparent"
+      borderColor="transparent"
+      onClick={handleGoToConfiguration}
+      source={<CogIcon />}
+      size="2rem"
+    />
   ) : (
-    <Stack>
-      <Button
-        appearance="default"
-        onClick={handleGoToConfiguration}
-        icon={CogIcon}
-      >
+    <Box display="flex" gap="2">
+      <Button onClick={handleGoToConfiguration}>
+        <Icon source={<CogIcon />} />
         Configuración
       </Button>
-      <Button appearance="secondary" onClick={handleGoToDelivery}>
-        Envios personalizados
-      </Button>
+      <Button onClick={handleGoToDelivery}>Envios personalizados</Button>
       <Button appearance="primary" onClick={handleGoToOrders}>
         Ir a ventas
       </Button>
-    </Stack>
+    </Box>
   );
 
   useEffect(() => {
@@ -44,14 +44,16 @@ function PageMain() {
   }, []);
 
   return (
-    <Page
-      width="medium"
-      header={<Page.Header title={<Logo height={40} />} actions={actions} />}
-    >
-      <Stack column align="stretch">
-        <List />
-      </Stack>
-    </Page>
+    <>
+      <Page maxWidth="1200px">
+        <Page.Header title="Pago Nube" buttonStack={actions} />
+        <Page.Body>
+          <Box display="flex" flexDirection="column" alignItems="stretch">
+            <List />
+          </Box>
+        </Page.Body>
+      </Page>
+    </>
   );
 }
 

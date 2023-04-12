@@ -1,7 +1,8 @@
-import { DataList, Link, Text, Label } from '@tiendanube/components';
+import { Link, Text, Tag, Box } from '@nimbus-ds/components';
+import { DataList } from '@nimbus-ds/patterns';
 import { useHistory } from 'react-router-dom';
 
-const { Row, Cell } = DataList;
+const { Row } = DataList;
 function ListMobile() {
   const { push } = useHistory();
   const handleGoToDetail = () => {
@@ -9,57 +10,69 @@ function ListMobile() {
   };
   return (
     <DataList>
-      <Row id={'1'}>
-        <Cell rowTitle trimText width={70}>
-          <Link appearance="primary" onClick={handleGoToDetail}>
+      <Row id={'1'} flexDirection="column">
+        <Box display="flex" justifyContent="space-between" alignItems="center">
+          <Link
+            as="button"
+            appearance="primary"
+            onClick={handleGoToDetail}
+            textDecoration="none"
+          >
             #919191
           </Link>
-        </Cell>
-        <Cell width={30} alignRight>
-          <Label appearance="success" id="aa" label={'Pagado'} />
-        </Cell>
-        <Cell>
-          <Text textAlign="right">Aaa NN</Text>
-        </Cell>
+          <Tag appearance="success" id="aa">
+            {'Pagado'}
+          </Tag>
+        </Box>
+        <Text>Customer name</Text>
       </Row>
-      <Row id={'2'}>
-        <Cell rowTitle trimText width={70}>
-          <Link appearance="primary" onClick={handleGoToDetail}>
-            #919191
+      <Row id={'2'} flexDirection="column">
+        <Box display="flex" justifyContent="space-between" alignItems="center">
+          <Link
+            as="button"
+            appearance="primary"
+            onClick={handleGoToDetail}
+            textDecoration="none"
+          >
+            #919190
           </Link>
-        </Cell>
-        <Cell width={30} alignRight>
-          <Label appearance="danger" id="aa" label={'Rechazado'} />
-        </Cell>
-        <Cell>
-          <Text textAlign="right">Aaa NN</Text>
-        </Cell>
+          <Tag appearance="danger" id="aa">
+            {'Rechazado'}
+          </Tag>
+        </Box>
+        <Text>Customer name</Text>
       </Row>
-      <Row id={'22'}>
-        <Cell rowTitle trimText width={70}>
-          <Link appearance="primary" onClick={handleGoToDetail}>
-            #919191
+      <Row id={'3'} flexDirection="column">
+        <Box display="flex" justifyContent="space-between" alignItems="center">
+          <Link
+            as="button"
+            appearance="primary"
+            onClick={handleGoToDetail}
+            textDecoration="none"
+          >
+            #919189
           </Link>
-        </Cell>
-        <Cell width={30} alignRight>
-          <Label appearance="success" id="aa" label={'Pagado'} />
-        </Cell>
-        <Cell>
-          <Text textAlign="right">Aaa NN</Text>
-        </Cell>
+          <Tag appearance="success" id="aa">
+            {'Pagado'}
+          </Tag>
+        </Box>
+        <Text>Customer name</Text>
       </Row>
-      <Row id={'22'}>
-        <Cell rowTitle trimText width={70}>
-          <Link appearance="primary" onClick={handleGoToDetail}>
-            #919191
+      <Row id={'4'} flexDirection="column">
+        <Box display="flex" justifyContent="space-between" alignItems="center">
+          <Link
+            as="button"
+            appearance="primary"
+            onClick={handleGoToDetail}
+            textDecoration="none"
+          >
+            #919188
           </Link>
-        </Cell>
-        <Cell width={30} alignRight>
-          <Label appearance="success" id="aa" label={'Pagado'} />
-        </Cell>
-        <Cell>
-          <Text textAlign="right">Aaa NN</Text>
-        </Cell>
+          <Tag appearance="success" id="aa">
+            {'Pagado'}
+          </Tag>
+        </Box>
+        <Text>Customer name</Text>
       </Row>
     </DataList>
   );
