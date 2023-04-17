@@ -1,4 +1,4 @@
 export { default as MainPage } from './MainPage';
-export { default as ConfigurationPage } from './ConfigurationPage';
-export { default as DetailPage } from './DetailPage';
-export { default as DeliveryPage } from './DeliveryPage';
+export { default as ExamplesPage } from './ExamplesPage';
+export { default as ProductsPage } from './ProductsPage.tsx';
+export * from './examples';
