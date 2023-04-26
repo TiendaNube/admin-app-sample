@@ -7,23 +7,16 @@ import {
   Box,
   IconButton,
   Card,
-  Title,
   Text,
   Link,
 } from '@nimbus-ds/components';
 import { Layout, Page } from '@nimbus-ds/patterns';
-import {
-  ExternalLinkIcon,
-  PictureIcon,
-  PlusCircleIcon,
-  TagIcon,
-} from '@nimbus-ds/icons';
+import { ExternalLinkIcon, PictureIcon } from '@nimbus-ds/icons';
 import tokens from '@nimbus-ds/tokens/dist/js/tokens';
 import { goTo, navigateHeaderRemove } from '@tiendanube/nexo/helpers';
 
 import nexo from '../../nexoClient';
 import { useWindowWidth } from '../../hooks';
-import { useProductContext } from '../../components';
 
 function PageMain() {
   const { push } = useHistory();
@@ -32,13 +25,7 @@ function PageMain() {
   const breakpointMd = tokens.breakpoint.md.value.replace('px', '');
 
   const handleGoToExamples = () => push('/examples');
-  const handleGoToProducts = () => push('/products');
   const handleGoToOrders = () => goTo(nexo, '/orders');
-
-  const { products, addProducts } = useProductContext();
-  const productsQty = products.length;
-
-  const add5Products = () => addProducts(5);
 
   const actions =
     windowWidth !== null && windowWidth <= breakpointMd ? (
@@ -54,10 +41,6 @@ function PageMain() {
         <Button onClick={handleGoToExamples}>
           <Icon source={<PictureIcon />} color="currentColor" />
           Ejemplos
-        </Button>
-        <Button onClick={handleGoToProducts}>
-          <Icon source={<TagIcon />} color="currentColor" />
-          Productos
         </Button>
         <Button appearance="primary" onClick={handleGoToOrders}>
           Ir a ventas
@@ -103,32 +86,6 @@ function PageMain() {
                     Conocé más sobre cómo crear tu app
                     <Icon color="currentColor" source={<ExternalLinkIcon />} />
                   </Link>
-                </Card.Footer>
-              </Card>
-              <Card>
-                <Card.Header title="Contador de productos de Tienda demo" />
-                <Card.Body>
-                  <Box display="flex" flexDirection="column" gap="4" mb="2">
-                    <Text>
-                      Los productos de ejemplo se crean con un nombre y precio
-                      aleatorios, a modo de prueba. Podés modificarlos o
-                      eliminarlos en cualquier momento.
-                    </Text>
-                    <Box display="flex" flexDirection="column" gap="2">
-                      <Text color="neutral-textDisabled">
-                        Total de productos
-                      </Text>
-                      <Title as="h6" fontSize="h1" color="primary-textLow">
-                        {productsQty}
-                      </Title>
-                    </Box>
-                  </Box>
-                </Card.Body>
-                <Card.Footer>
-                  <Button appearance="primary" onClick={add5Products}>
-                    <Icon color="currentColor" source={<PlusCircleIcon />} />
-                    Crear 5 productos
-                  </Button>
                 </Card.Footer>
               </Card>
             </Layout.Section>
