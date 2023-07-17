@@ -13,31 +13,9 @@ declare global {
   }
 }
 
-/* Mock Appcues identify config */
-const {
-  externalUserId,
-  storeId,
-  firstName,
-  lastName,
-  email,
-  storeName,
-  countryCode,
-  storeUrl,
-  createdAt,
-} = {
-  externalUserId: '2446429',
-  storeId: '2349817',
-  firstName: 'Ignacio Zullo',
-  lastName: '',
-  email: 'ignaciozullo@gmail.com',
-  storeName: 'TiendaNacho',
-  countryCode: 'AR',
-  storeUrl: 'https://tiendanacho3.mitiendanube.com',
-  createdAt: '2022-08-18T15:07:30.000Z',
-};
-
-export const ACTION_STORE_INFO = 'app/store/info';
-export const ACTION_USER_INFO = 'app/user/info';
+/* Nexo actions & interfaces */
+const ACTION_STORE_INFO = 'app/store/info';
+const ACTION_USER_INFO = 'app/user/info';
 
 interface UserInfo {
   id: string;
@@ -77,7 +55,6 @@ function Appcues(): null {
   }, []);
 
   useEffect(() => {
-    console.log({ storeInfo, userInfo });
     if (!storeInfo || !userInfo) {
       console.error('Appcues store & user info not present');
       return;
