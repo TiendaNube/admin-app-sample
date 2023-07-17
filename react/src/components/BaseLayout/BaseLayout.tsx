@@ -4,7 +4,7 @@ import { ThemeProvider } from '@nimbus-ds/styles';
 import { useDarkMode } from '../';
 
 const BaseLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const { darkMode, toggleDarkMode } = useDarkMode();
+  const { darkMode } = useDarkMode();
   const currentTheme = darkMode ? 'dark' : 'base';
   const [active, setActive] = useState(currentTheme === 'dark');
 
