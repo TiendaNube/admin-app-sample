@@ -4,3 +4,4 @@ export { default as DarkModeProvider } from './DarkModeProvider';
 export * from './DarkModeProvider';
 export { default as ResponsiveComponent } from './ResponsiveComponent';
 export { default as AppMenu } from './AppMenu';
+export { default as Appcues } from './Appcues';

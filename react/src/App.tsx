@@ -15,7 +15,7 @@ import {
   SettingsExamplePage,
   SimpleListExamplePage,
 } from './pages';
-import { DarkModeProvider, BaseLayout } from './components';
+import { DarkModeProvider, BaseLayout, Appcues } from './components';
 
 import { ToastProvider } from '@nimbus-ds/components';
 
@@ -37,35 +37,38 @@ function App() {
         <ToastProvider>
           <BaseLayout>
             <NexoSyncRoute>
-              <Switch>
-                <Route path="/" exact>
-                  <MainPage />
-                </Route>
-                <Route path="/examples">
-                  <ExamplesPage />
-                </Route>
-                <Route path="/examples-confirmation-modal">
-                  <ConfirmationModalExamplePage />
-                </Route>
-                <Route path="/examples-form">
-                  <FormExamplePage />
-                </Route>
-                <Route path="/examples-login">
-                  <LoginExamplePage />
-                </Route>
-                <Route path="/examples-page-template">
-                  <PageTemplateExamplePage />
-                </Route>
-                <Route path="/examples-product-list">
-                  <ProductListExamplePage />
-                </Route>
-                <Route path="/examples-settings">
-                  <SettingsExamplePage />
-                </Route>
-                <Route path="/examples-simple-list">
-                  <SimpleListExamplePage />
-                </Route>
-              </Switch>
+              <>
+                <Appcues />
+                <Switch>
+                  <Route path="/" exact>
+                    <MainPage />
+                  </Route>
+                  <Route path="/examples">
+                    <ExamplesPage />
+                  </Route>
+                  <Route path="/examples-confirmation-modal">
+                    <ConfirmationModalExamplePage />
+                  </Route>
+                  <Route path="/examples-form">
+                    <FormExamplePage />
+                  </Route>
+                  <Route path="/examples-login">
+                    <LoginExamplePage />
+                  </Route>
+                  <Route path="/examples-page-template">
+                    <PageTemplateExamplePage />
+                  </Route>
+                  <Route path="/examples-product-list">
+                    <ProductListExamplePage />
+                  </Route>
+                  <Route path="/examples-settings">
+                    <SettingsExamplePage />
+                  </Route>
+                  <Route path="/examples-simple-list">
+                    <SimpleListExamplePage />
+                  </Route>
+                </Switch>
+              </>
             </NexoSyncRoute>
           </BaseLayout>
         </ToastProvider>
